@@ -42,13 +42,5 @@ public class SingletonTest {
         System.out.println("\nThread Safe Singleton (double-checked locking):");
         System.out.println(doubleLockingInstance1.hashCode());
         System.out.println(doubleLockingInstance2.hashCode());
-
-        // Test BillPughSingleton
-        BillPughSingleton billPughInstance1 = BillPughSingleton.getInstance();
-        BillPughSingleton billPughInstance2 = BillPughSingleton.getInstance();
-
-        System.out.println("\nBill Pugh Singleton:");
-        System.out.println(billPughInstance1.hashCode());
-        System.out.println(billPughInstance2.hashCode());
     }
 }
