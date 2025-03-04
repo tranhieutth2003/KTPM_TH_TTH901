@@ -18,13 +18,5 @@ public class SingletonTest {
         System.out.println("\nStatic Block Singleton:");
         System.out.println(staticBlockInstance1.hashCode());
         System.out.println(staticBlockInstance2.hashCode());
-
-        // Test LazyInitializedSingleton
-        LazyInitializedSingleton lazyInstance1 = LazyInitializedSingleton.getInstance();
-        LazyInitializedSingleton lazyInstance2 = LazyInitializedSingleton.getInstance();
-
-        System.out.println("\nLazy Initialized Singleton:");
-        System.out.println(lazyInstance1.hashCode());
-        System.out.println(lazyInstance2.hashCode());
     }
 }
