@@ -1,7 +1,5 @@
 package com.journaldev.singleton;
 
-import java.io.*;
-
 public class SingletonTest {
     public static void main(String[] args) {
 
@@ -52,8 +50,8 @@ public class SingletonTest {
         System.out.println("\nBill Pugh Singleton:");
         System.out.println(billPughInstance1.hashCode());
         System.out.println(billPughInstance2.hashCode());
-
-        // Test EnumSingleton
+        
+     // Test EnumSingleton
         EnumSingleton enumInstance1 = EnumSingleton.INSTANCE;
         EnumSingleton enumInstance2 = EnumSingleton.INSTANCE;
 
@@ -62,27 +60,5 @@ public class SingletonTest {
         System.out.println(enumInstance2.hashCode());
 
         enumInstance1.doSomething();
-
-        // Test SerializedSingleton
-        try {
-            SerializedSingleton serializedInstance1 = SerializedSingleton.getInstance();
-
-            // Serialize to file
-            ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("serialized_singleton.ser"));
-            out.writeObject(serializedInstance1);
-            out.close();
-
-            // Deserialize from file
-            ObjectInputStream in = new ObjectInputStream(new FileInputStream("serialized_singleton.ser"));
-            SerializedSingleton serializedInstance2 = (SerializedSingleton) in.readObject();
-            in.close();
-
-            System.out.println("\nSerialized Singleton:");
-            System.out.println(serializedInstance1.hashCode());
-            System.out.println(serializedInstance2.hashCode());
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
     }
 }
