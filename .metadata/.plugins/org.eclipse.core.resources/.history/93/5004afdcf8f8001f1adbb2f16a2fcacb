@@ -26,21 +26,5 @@ public class SingletonTest {
         System.out.println("\nLazy Initialized Singleton:");
         System.out.println(lazyInstance1.hashCode());
         System.out.println(lazyInstance2.hashCode());
-
-        // Test ThreadSafeSingleton with synchronized method
-        ThreadSafeSingleton threadSafeInstance1 = ThreadSafeSingleton.getInstance();
-        ThreadSafeSingleton threadSafeInstance2 = ThreadSafeSingleton.getInstance();
-
-        System.out.println("\nThread Safe Singleton (synchronized method):");
-        System.out.println(threadSafeInstance1.hashCode());
-        System.out.println(threadSafeInstance2.hashCode());
-
-        // Test ThreadSafeSingleton with double-checked locking
-        ThreadSafeSingleton doubleLockingInstance1 = ThreadSafeSingleton.getInstanceUsingDoubleLocking();
-        ThreadSafeSingleton doubleLockingInstance2 = ThreadSafeSingleton.getInstanceUsingDoubleLocking();
-
-        System.out.println("\nThread Safe Singleton (double-checked locking):");
-        System.out.println(doubleLockingInstance1.hashCode());
-        System.out.println(doubleLockingInstance2.hashCode());
     }
 }
