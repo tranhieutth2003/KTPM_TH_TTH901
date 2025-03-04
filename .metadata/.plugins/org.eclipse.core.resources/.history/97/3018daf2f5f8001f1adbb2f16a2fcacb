@@ -1,0 +1,5 @@
+package com.journaldev.singleton;
+
+public class LazyInitializedSingleton {
+
+}
