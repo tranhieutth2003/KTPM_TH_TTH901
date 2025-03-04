@@ -50,15 +50,5 @@ public class SingletonTest {
         System.out.println("\nBill Pugh Singleton:");
         System.out.println(billPughInstance1.hashCode());
         System.out.println(billPughInstance2.hashCode());
-        
-     // Test EnumSingleton
-        EnumSingleton enumInstance1 = EnumSingleton.INSTANCE;
-        EnumSingleton enumInstance2 = EnumSingleton.INSTANCE;
-
-        System.out.println("\nEnum Singleton:");
-        System.out.println(enumInstance1.hashCode());
-        System.out.println(enumInstance2.hashCode());
-
-        enumInstance1.doSomething();
     }
 }
